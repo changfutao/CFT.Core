@@ -26,4 +26,9 @@ namespace CFT.Core.Common.BaseModel
         [Description("主键Id")]
         public TKey Id { get; set; }
     }
+
+    public class Entity : Entity<long>
+    {
+        
+    }
 }

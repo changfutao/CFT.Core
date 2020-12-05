@@ -5,7 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Admin\" />
+    <ProjectReference Include="..\CFT.Core.Common\CFT.Core.Common.csproj" />
   </ItemGroup>
 
 </Project>
