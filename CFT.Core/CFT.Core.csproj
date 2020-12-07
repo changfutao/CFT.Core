@@ -6,8 +6,27 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="configs\mytest.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="configs\mytest.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Controllers\" />
-    <Folder Include="configs\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CFT.Core.Common\CFT.Core.Common.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="configs\appconfig.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
 </Project>

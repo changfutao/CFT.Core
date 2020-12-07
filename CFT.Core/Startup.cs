@@ -1,3 +1,5 @@
+using CFT.Core.Common;
+using CFT.Core.Common.Helpers;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -14,16 +16,15 @@ namespace CFT.Core
 {
     public class Startup
     {
+        public IConfiguration Configuration { get; }
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
         }
 
-        public IConfiguration Configuration { get; }
-
         public void ConfigureServices(IServiceCollection services)
         {
-
+            string randomStr= StringHelper.GenerateRandom(32);
             services.AddControllers();
         }
 
